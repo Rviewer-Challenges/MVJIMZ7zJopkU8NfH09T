@@ -7,10 +7,15 @@ import MainScreen from "./src/screens/Main/Main";
 const Stack = createNativeStackNavigator();
 
 function App() {
+  const options = {
+    title: 'La Mia Pizza',
+    headerTitleAlign: "center"
+  };
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={MainScreen} options={{ title: 'La Mia Pizza' }} />
+      <Stack.Navigator initialRouteName="Home" screenOptions={options}>
+        <Stack.Screen name="Home" component={MainScreen} />
       </Stack.Navigator>
     </NavigationContainer>
     
