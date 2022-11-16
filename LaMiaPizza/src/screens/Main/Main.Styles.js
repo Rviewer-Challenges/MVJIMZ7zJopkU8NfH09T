@@ -1,9 +1,11 @@
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styled from 'styled-components';
 
 const Container = styled.View`
     flex: 1;
 `;
+
+const ItemTouch = styled.TouchableHighlight``;
 
 const List = styled.FlatList`
     padding-horizontal: 16px;
@@ -29,11 +31,13 @@ const Name = styled.Text`
     font-size: 22px;
     font-weight: bold;
     color: #000000;
+    margin-bottom: 6px;
 `; 
 
 const Price = styled.Text`
     font-size: 18px;
-    color: #8C8C8C;
+    color: #63b521;
+    font-weight: bold;
 `;
 
 const Content = styled.View`
@@ -52,6 +56,7 @@ const AddCart = styled(Icon.Button)`
 
 export { 
     Container,
+    ItemTouch,
     List,
     PizzaImage,
     Card,
