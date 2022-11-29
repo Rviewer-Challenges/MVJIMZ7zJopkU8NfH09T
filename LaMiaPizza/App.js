@@ -25,14 +25,18 @@ function App() {
         <Cart onPress={()=> navigation.navigate('ShoppingCart')}/>
       )
     }
-  }
+  };
+
+  const detailsOptions = {
+    headerShown: false
+  };
 
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" screenOptions={options}>
         <Stack.Screen name="Home" component={MainScreen} options={homeOptions}/>
         <Stack.Screen name="ShoppingCart" component={ShoppingCartScreen}/>
-        <Stack.Screen name="Details" component={DetailsScreen}/>
+        <Stack.Screen name="Details" component={DetailsScreen} options={detailsOptions}/>
       </Stack.Navigator>
     </NavigationContainer>
     
